@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Try-On - EyeTech</title>
+  <link rel="stylesheet" href="ssj.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">EyeTech</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="tryon.html">Try-On</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tryon-section">
+      <h1>Virtual Glasses Try-On 👓 (Live Webcam)</h1>
+
+      <div class="container">
+        <video class="input_video" autoplay></video>
+        <canvas class="output_canvas"></canvas>
+      </div>
+
+      <div class="products">
+        <button onclick="selectGlasses('glasses3.png')">Sporty Wrap-Around</button>
+        <button onclick="selectGlasses('gk.avif')">GK Style</button>
+        <button onclick="selectGlasses('uu.avif')">UU Style</button>
+        <button onclick="selectGlasses('rock.avif')">Rock Style</button>
+        <button onclick="selectGlasses('safari.avif')">Safari Style</button>
+        <button onclick="selectGlasses('round aviator.webp')">Round Aviator Style</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 EyeTech. All rights reserved.</p>
+  </footer>
+
+  <!-- Mediapipe FaceMesh libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="hhs.js"></script>
+</body>
+</html>
